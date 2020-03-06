@@ -1,8 +1,6 @@
 # HrrRbHostname
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hrr_rb_hostname`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+hrr_rb_hostname is a wrapper around gethostname and sethostname for CRuby.
 
 ## Installation
 
@@ -22,7 +20,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+The basic usage is as follows.
+
+```ruby
+require "hrr_rb_hostname"
+
+HrrRbHostname.get               # => "currenthostname"
+HrrRbHostname.set "newhostname" # => "newhostname"
+HrrRbHostname.get               # => "newhostname"
+```
+
+### Getting hostname
+
+The .get and .gethostname methods return the current hostname as same as hostname command.
+
+```ruby
+HrrRbHostname.get         # => "currenthostname"
+HrrRbHostname.gethostname # => "currenthostname"
+```
+
+#### Setting hostname
+
+The .set and .sethostname methods set hostname and return the set hostname.
+
+```ruby
+HrrRbHostname.set "newhostname"         # => "newhostname"
+HrrRbHostname.sethostname "newhostname" # => "newhostname"
+```
 
 ## Development
 
@@ -32,7 +56,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hrr_rb_hostname. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/hrr_rb_hostname/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/hirura/hrr_rb_hostname. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/hirura/hrr_rb_hostname/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
@@ -41,4 +65,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the HrrRbHostname project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/hrr_rb_hostname/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the HrrRbHostname project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/hirura/hrr_rb_hostname/blob/master/CODE_OF_CONDUCT.md).
