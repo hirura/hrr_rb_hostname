@@ -1,5 +1,7 @@
 # HrrRbHostname
 
+[![Build Status](https://travis-ci.com/hirura/hrr_rb_hostname.svg?branch=master)](https://travis-ci.com/hirura/hrr_rb_hostname)
+
 hrr_rb_hostname is a wrapper around gethostname and sethostname for CRuby.
 
 ## Installation
