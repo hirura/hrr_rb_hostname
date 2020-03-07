@@ -5,6 +5,17 @@
 
 hrr_rb_hostname is a wrapper around gethostname and sethostname for CRuby.
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Getting domainname](#getting-domainname)
+  - [Setting domainname](#setting-domainname)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
+- [Code of Conduct](#code-of-conduct)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -42,7 +53,7 @@ HrrRbHostname.get         # => "currenthostname"
 HrrRbHostname.gethostname # => "currenthostname"
 ```
 
-#### Setting hostname
+### Setting hostname
 
 The .set and .sethostname methods set hostname and return the set hostname.
 
