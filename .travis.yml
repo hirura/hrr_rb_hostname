@@ -17,11 +17,13 @@ jobs:
 before_install:
   - gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
   - gem install bundler -v '< 2'
+  - yes | gem update --system --force
+  - gem update bundler
 install:
   - bundle install
 before_script:
-  - bundle exec rake clean clobber
+  - bundle exec rake clean
 script:
   - sudo env RBENV_VERSION="${RBENV_VERSION}" PATH="${RBENV_ROOT}/shims:${RBENV_ROOT}/bin:${PATH}" bundle exec rake compile spec
 after_script:
-  - bundle exec rake clean clobber
+  - bundle exec rake clean
